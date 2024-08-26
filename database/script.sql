@@ -4,6 +4,7 @@ CREATE DATABASE essence;
 CREATE TABLE usuarios (
   id                BIGINT          PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   nombre            VARCHAR(100)    NOT NULL,
+  apellido          VARCHAR(100)    NOT NULL,
   email             VARCHAR(255)    UNIQUE NOT NULL,
   contrasena        VARCHAR(255)    NOT NULL,
   direccion         VARCHAR(255),
