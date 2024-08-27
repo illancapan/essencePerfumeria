@@ -18,11 +18,11 @@ Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas
        
 -   Mi perfil vista Usuario
 
-    ![Vista Perfil POV Usuario](img/vista6.png)
+    ![Vista Perfil POV Usuario](img/vista7.png)
     
 -   Mi perfil vista Administrador y formulario para subir Producto
 
-    ![Vista Perfil POV Administrador](img/vista7.png)
+    ![Vista Perfil POV Administrador](img/vista6.png)
     
 -   Vista de detalle de Producto
 
