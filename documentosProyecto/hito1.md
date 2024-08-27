@@ -15,15 +15,15 @@ Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas
 -   Inicio de Sesión
 
     ![Vista Inicio de Sesion](img/vista4.png)
-       
+
 -   Mi perfil vista Usuario
 
     ![Vista Perfil POV Usuario](img/vista6.png)
-    
+
 -   Mi perfil vista Administrador y formulario para subir Producto
 
     ![Vista Perfil POV Administrador](img/vista7.png)
-    
+
 -   Vista de detalle de Producto
 
     ![Vista Detalle de Producto](img/vista2.png)
@@ -31,7 +31,6 @@ Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas
 -   Vista de Carrito de venta
 
     ![Vista Carrito de venta](img/vista5.png)
-    
 
 ---
 
@@ -162,7 +161,7 @@ CREATE TABLE historial_pedidos (
 
 > **Herramienta utilizada**: [draw.io](https://app.diagrams.net/) >
 >
-> Diagrama Entidad Relacion ![](D:\DESAFIO-LATAM\PROYECTO-FINAL\essencePerfumeria\documentosProyecto\img\Diagrama sin título.webp)
+> Diagrama Entidad Relacion ![](img/essenceDiagrama.png)
 
 ---
 
