@@ -10,7 +10,7 @@ Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas
 
 -   Registro de Usuarios
 
-    ![Vista Registro de Usuarios](/img/vista3.png)
+    ![Vista Registro de Usuarios](img/vista3.png)
 
 -   Inicio de Sesión
 
