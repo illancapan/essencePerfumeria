@@ -4,13 +4,34 @@
 
 Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas son:
 
--   Página principal
--   Registro de usuarios
--   Inicio de sesión
--   Mi perfil
--   Formulario para crear una publicación
--   Galería de publicaciones
--   Vista de detalle de una publicación
+-   Página principal y Galeria de Publicaciones
+
+    ![Vista Principal y Listado de Productos](img/vista1.png)
+
+-   Registro de Usuarios
+
+    ![Vista Registro de Usuarios](img/vista3.png)
+
+-   Inicio de Sesión
+
+    ![Vista Inicio de Sesion](img/vista4.png)
+       
+-   Mi perfil vista Usuario
+
+    ![Vista Perfil POV Usuario](img/vista6.png)
+    
+-   Mi perfil vista Administrador y formulario para subir Producto
+
+    ![Vista Perfil POV Administrador](img/vista7.png)
+    
+-   Vista de detalle de Producto
+
+    ![Vista Detalle de Producto](img/vista2.png)
+
+-   Vista de Carrito de venta
+
+    ![Vista Carrito de venta](img/vista5.png)
+    
 
 ---
 
