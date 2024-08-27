@@ -161,7 +161,7 @@ CREATE TABLE historial_pedidos (
 
 > **Herramienta utilizada**: [draw.io](https://app.diagrams.net/) >
 >
-> Diagrama Entidad Relacion ![](img/essenceDiagrama.png)
+> Diagrama Entidad Relacion ![](img/essenceDiagrama.webp)
 
 ---
 
