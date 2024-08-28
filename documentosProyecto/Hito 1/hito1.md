@@ -15,15 +15,24 @@ Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas
 -   Inicio de Sesión
 
     ![Vista Inicio de Sesion](img/vista4.png)
-       
+
 -   Mi perfil vista Usuario
 
+<<<<<<< HEAD
+    ![Vista Perfil POV Usuario](img/vista6.png)
+
+-   Mi perfil vista Administrador y formulario para subir Producto
+
+    ![Vista Perfil POV Administrador](img/vista7.png)
+
+=======
     ![Vista Perfil POV Usuario](img/vista7.png)
     
 -   Mi perfil vista Administrador y formulario para subir Producto
 
     ![Vista Perfil POV Administrador](img/vista6.png)
     
+>>>>>>> fccee19e8c3ed8de45c880ea71ff274c5a70feb7
 -   Vista de detalle de Producto
 
     ![Vista Detalle de Producto](img/vista2.png)
@@ -31,7 +40,6 @@ Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas
 -   Vista de Carrito de venta
 
     ![Vista Carrito de venta](img/vista5.png)
-    
 
 ---
 
@@ -44,18 +52,20 @@ El Marketplace cuenta con vistas públicas y privadas:
     -   Página principal
     -   Registro de usuarios
     -   Inicio de sesión
+    -   Detalle producto
+    -   Carro de compras
 
 -   **Vistas privadas**:
-    -   Mi perfil
+    -   Perfil usuario
+    -   Perfil administrador
     -   Formulario para crear una publicación
-    -   Galería de publicaciones
-    -   Detalle de una publicación
 
 La navegación entre estas vistas está definida de la siguiente forma:
 
 -   Un usuario no autenticado puede acceder libremente a las vistas públicas.
 -   Un usuario autenticado tiene acceso a las vistas privadas.
 
+    ![Navegacion entre las vistas](img/image.png)
 ---
 
 ## 3. Listado de Dependencias
@@ -81,6 +91,7 @@ A continuación se presenta el diseño de las tablas de la base de datos y sus r
 CREATE TABLE usuarios (
   id                BIGINT          PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   nombre            VARCHAR(100)    NOT NULL,
+  apellido          VARCHAR(100)    NOT NULL,
   email             VARCHAR(255)    UNIQUE NOT NULL,
   contrasena        VARCHAR(255)    NOT NULL,
   direccion         VARCHAR(255),
@@ -102,8 +113,6 @@ CREATE TABLE fragancias (
 
 ```
 
-
-
 ### **Productos**
 
 ```sql
@@ -122,8 +131,6 @@ CREATE TABLE productos (
 
 ```
 
-
-
 ### **Pedidos**
 
 ```sql
@@ -138,8 +145,6 @@ CREATE TABLE pedidos (
 
 ```
 
-
-
 ### **Detalles de Pedido**
 
 ```sql
@@ -153,8 +158,6 @@ CREATE TABLE detalles_pedido (
 
 ```
 
-
-
 ### **Historial de Pedidos**
 
 ```sql
@@ -167,11 +170,9 @@ CREATE TABLE historial_pedidos (
 
 ```
 
-
-
 > **Herramienta utilizada**: [draw.io](https://app.diagrams.net/) >
 >
-> Diagrama Entidad Relacion ![](D:\DESAFIO-LATAM\PROYECTO-FINAL\essencePerfumeria\documentosProyecto\img\Diagrama sin título.webp)
+> Diagrama Entidad Relacion ![](img/essenceDiagrama.webp)
 
 ---
 
@@ -188,6 +189,7 @@ El contrato de la API REST incluirá los siguientes endpoints:
 **Descripción:** Crea un nuevo usuario en la tienda.
 
 ### Request Body:
+
 ```json
 {
     "nombre": "string",
@@ -202,7 +204,7 @@ El contrato de la API REST incluirá los siguientes endpoints:
 **Código 201 Created**
 
 ```json {
-{    
+{
     "id": "string",
     "nombre": "string",
     "email": "string",
@@ -352,7 +354,7 @@ El contrato de la API REST incluirá los siguientes endpoints:
 }
 ```
 
-------
+---
 
 ## 6. Actualizar un perfume existente
 
