@@ -52,18 +52,20 @@ El Marketplace cuenta con vistas públicas y privadas:
     -   Página principal
     -   Registro de usuarios
     -   Inicio de sesión
+    -   Detalle producto
+    -   Carro de compras
 
 -   **Vistas privadas**:
-    -   Mi perfil
+    -   Perfil usuario
+    -   Perfil administrador
     -   Formulario para crear una publicación
-    -   Galería de publicaciones
-    -   Detalle de una publicación
 
 La navegación entre estas vistas está definida de la siguiente forma:
 
 -   Un usuario no autenticado puede acceder libremente a las vistas públicas.
 -   Un usuario autenticado tiene acceso a las vistas privadas.
 
+    ![Navegacion entre las vistas](image.png)
 ---
 
 ## 3. Listado de Dependencias
