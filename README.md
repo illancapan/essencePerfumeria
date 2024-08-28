@@ -6,7 +6,7 @@ Este proyecto consiste en el desarrollo de una aplicación web para un marketpla
 
 ## Entregas de los Hitos
 
--   [Hito 1 Diseño y Prototipo](documentosProyecto/Hito 1/hito1.md) 
+-   [Hito 1 Diseño y Prototipo](documentosProyecto/Hito%201/hito1.md) 
     (Incluye el diseño de la interfaz gráfica, definición de la navegación, listado de dependencias, diseño de la base de datos y contrato de datos de la API REST).
 
 -   [Hito 2](path-to-hito-2)  
