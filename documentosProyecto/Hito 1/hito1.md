@@ -18,21 +18,12 @@ Se ha diseñado un boceto de las vistas del proyecto. Las pantallas consideradas
 
 -   Mi perfil vista Usuario
 
-<<<<<<< HEAD
-    ![Vista Perfil POV Usuario](img/vista6.png)
-
--   Mi perfil vista Administrador y formulario para subir Producto
-
-    ![Vista Perfil POV Administrador](img/vista7.png)
-
-=======
     ![Vista Perfil POV Usuario](img/vista7.png)
-    
+   
 -   Mi perfil vista Administrador y formulario para subir Producto
 
     ![Vista Perfil POV Administrador](img/vista6.png)
     
->>>>>>> fccee19e8c3ed8de45c880ea71ff274c5a70feb7
 -   Vista de detalle de Producto
 
     ![Vista Detalle de Producto](img/vista2.png)
@@ -65,7 +56,7 @@ La navegación entre estas vistas está definida de la siguiente forma:
 -   Un usuario no autenticado puede acceder libremente a las vistas públicas.
 -   Un usuario autenticado tiene acceso a las vistas privadas.
 
-    ![Navegacion entre las vistas](image.png)
+    ![Navegacion entre las vistas](img/image.png)
 ---
 
 ## 3. Listado de Dependencias
