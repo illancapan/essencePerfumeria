@@ -63,12 +63,19 @@ La navegación entre estas vistas está definida de la siguiente forma:
 
 Las dependencias a utilizar en el proyecto son las siguientes:
 
--   Framework CSS: Bootstrap
--   JavaScript: React.js
--   Backend: Node.js con Express
--   Base de datos: PostgreSQL
--   Autenticación: JWT para manejo de sesiones
--   Librería de íconos: Font Awesome
+-   **Frontend**:
+    -   React
+    -   React dom
+    -   React Bootstrap
+
+-   **Backend**:
+
+    -   Express
+    -   PostgreSQL (pg, pg-format)
+    -   Jsonwebtoken
+    -   Bcryptjs
+    -   Cors
+    -   Dotenv
 
 ---
 
