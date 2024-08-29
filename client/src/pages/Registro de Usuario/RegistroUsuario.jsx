@@ -207,25 +207,25 @@ const RegistroUsuario = () => {
                 </header>
             {/* Fin del Header */}
             
-            <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
+            <main style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
                 <div style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
                     <h3 style={{ textAlign: 'center' }}>Registro de Usuario</h3>
                     <form>
                         <div style={{ marginBottom: '15px' }}>
                             <label>Nombre</label>
-                            <input type="text" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
+                            <input type="text" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
                         </div>
                         <div style={{ marginBottom: '15px' }}>
                             <label>Apellido</label>
-                            <input type="text" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
+                            <input type="text" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
                         </div>
                         <div style={{ marginBottom: '15px' }}>
                             <label>Email</label>
-                            <input type="email" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
+                            <input type="email" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
                         </div>
                         <div style={{ marginBottom: '20px' }}>
                             <label>Contraseña</label>
-                            <input type="password" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
+                            <input type="password" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
                         </div>
                         <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
                             Registrarse
