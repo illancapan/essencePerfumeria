@@ -1,9 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrincipalMaqueta from './pages/principalMaqueta/PrincipalMaqueta';
-import RegistroUsuario from './pages/Registro de Usuario/RegistroUsuario';
-import InicioSesion from './pages/Inicio de Sesion/InicioSesion';
-import PoVUsuario from './pages/Mi Perfil Usuario/PoVUsuario';
+import RegistroUsuario from './pages/RegistrodeUsuario/RegistroUsuario';
+import InicioSesion from './pages/IniciodeSesion/InicioSesion';
+import MiPerfilUsuario from './pages/MiPerfilUsuario/MiPerfilUsuario';
+import MiPerfilAdmin from './pages/MiPerfilAdmin/MiPerfilAdmin';
+import DetalleProducto from './pages/DetalleProducto/DetalleProducto';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -20,7 +22,13 @@ function App() {
                 <Route path="/login" element={<InicioSesion />} />
 
                 {/* Ruta para la vista Mi perfil Usuario */}
-                <Route path="/profile" element={<PoVUsuario />} />
+                <Route path="/profile" element={<MiPerfilUsuario />} />
+
+                {/* Ruta para la vista Mi perfil Admin */}
+                <Route path="/admin" element={<MiPerfilAdmin />} />
+
+                {/* Ruta para la vista de Detalle de Producto */}
+                <Route path="/product/:id" element={<DetalleProducto />} />
             </Routes>
         </Router>
     );

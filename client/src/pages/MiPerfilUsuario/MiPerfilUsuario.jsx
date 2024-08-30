@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PoVUsuario = () => {
+const MiPerfilUsuario = () => {
     return (
         <div className='app'>
                 <style jsx>{`
@@ -228,7 +228,7 @@ const PoVUsuario = () => {
                                 <label>Contraseña</label>
                                 <input type="password" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
                             </div>
-                            <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
+                            <button type="submit" style={{ width: '30%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
                                 Modificar o agregar
                             </button>
                         </form>
@@ -277,4 +277,4 @@ const PoVUsuario = () => {
     );
 };
 
-export default PoVUsuario;
+export default MiPerfilUsuario;
