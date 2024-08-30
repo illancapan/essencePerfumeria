@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../../components/Header'
 
 function PrincipalMaqueta() {
     return (
@@ -10,43 +11,7 @@ function PrincipalMaqueta() {
                         min-height: 100vh;
                         background-color: white;
                     }
-                    header {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 1rem 2rem;
-                        background-color: white;
-                    }
-                    .logo {
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                    }
-                    nav ul {
-                        display: flex;
-                        list-style-type: none;
-                        gap: 1.5rem;
-                    }
-                    .icons {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .cart-icon {
-                        position: relative;
-                    }
-                    .cart-count {
-                        position: absolute;
-                        top: -8px;
-                        right: -8px;
-                        background-color: red;
-                        color: white;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 0.75rem;
-                    }
+                    
                     .hero {
                         position: relative;
                         height: calc(100vh - 80px);
@@ -184,26 +149,7 @@ function PrincipalMaqueta() {
                     }
                 `}</style>
 
-                <header>
-                    <div className='logo'>essence</div>
-                    <nav>
-                        <ul>
-                            <li>Inicio</li>
-                            <li>Tienda</li>
-                            {/* <li>Perfil</li> */}
-                            {/* <li>Perfumes</li> */}
-                            <li>Contacto</li>
-                        </ul>
-                    </nav>
-                    <div className='icons'>
-                        <span>🔍</span>
-                        <span>👤</span>
-                        <span className='cart-icon'>
-                            🛒
-                            <span className='cart-count'>3</span>
-                        </span>
-                    </div>
-                </header>
+                <Header/>
 
                 <section className='hero'>
                     <img src='/placeholder.svg' alt='Hero Image' />
