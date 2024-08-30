@@ -2,11 +2,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrincipalMaqueta from './pages/principalMaqueta/PrincipalMaqueta';
-import RegistroUsuario from './pages/RegistrodeUsuario/RegistroUsuario';
-import InicioSesion from './pages/IniciodeSesion/InicioSesion';
-import MiPerfilUsuario from './pages/MiPerfilUsuario/MiPerfilUsuario';
-import MiPerfilAdmin from './pages/MiPerfilAdmin/MiPerfilAdmin';
-import DetalleProducto from './pages/DetalleProducto/DetalleProducto';
+import RegistroUsuario from './pages/registrodeUsuario/RegistroUsuario';
+import InicioSesion from './pages/iniciodeSesion/InicioSesion';
+import MiPerfilUsuario from './pages/miPerfilUsuario/MiPerfilUsuario';
+import MiPerfilAdmin from './pages/miPerfilAdmin/MiPerfilAdmin';
+import DetalleProducto from './pages/detalleProducto/DetalleProducto';
 import { ProductosProvider } from './context/ProductoContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
