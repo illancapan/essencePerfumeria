@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from '../../components/Header';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
 const InicioSesion = () => {
     return (
@@ -110,41 +111,7 @@ const InicioSesion = () => {
                         background-color: white;
                         cursor: pointer;
                     }
-                    footer {
-                        background-color: #f0f0f0;
-                        padding: 2rem;
-                        margin-top: 4rem;
-                    }
-                    .footer-content {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    }
-                    .subscribe {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .subscribe input {
-                        padding: 0.5rem;
-                        border: 1px solid #ccc;
-                    }
-                    .subscribe button {
-                        padding: 0.5rem 1rem;
-                        background-color: black;
-                        color: white;
-                        border: none;
-                        cursor: pointer;
-                    }
-                    .social-icons {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .footer-bottom {
-                        text-align: center;
-                        margin-top: 2rem;
-                        font-size: 0.875rem;
-                        color: #666;
-                    }
+                    
                 `}</style>
                 
             {/* Inicio del Header */}
@@ -171,27 +138,7 @@ const InicioSesion = () => {
             </main>
             
             {/* Inicio del Footer */}
-            <footer>
-                    <div className='footer-content'>
-                        <div className='logo'>essence</div>
-                        <div className='subscribe'>
-                            <input
-                                type='email'
-                                placeholder='Ingresa tu email'
-                            />
-                            <button>Suscribete</button>
-                        </div>
-                        <div className='social-icons'>
-                            <span>FB</span>
-                            <span>TW</span>
-                            <span>IG</span>
-                        </div>
-                    </div>
-                    <div className='footer-bottom'>
-                        © 2023 essence. Derechos reservados. | Politicas de
-                        privacidad | terminos de servicio
-                    </div>
-                </footer>
+            <Footer/>
             {/* Fin del Footer */}
         </div>
     );
