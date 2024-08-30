@@ -30,9 +30,9 @@ const PrincipalMaqueta = () => {
                             style={{ width: '100%', borderRadius: '8px' }}
                         />
                         <h2>{product.name}</h2>
-                        <p>Price: ${product.price}</p>
-                        <p>Category: {product.category}</p>
-                        <p>Rating: {product.rating}</p>
+                        <p>Precio: ${product.price}</p>
+                        <p>Categoria: {product.category}</p>
+                        <p>Popularidad: {product.rating}</p>
                     </div>
                 ))}
             </div>
