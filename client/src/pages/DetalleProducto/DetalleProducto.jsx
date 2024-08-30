@@ -1,7 +1,6 @@
-
 import React from 'react';
 
-const RegistroUsuario = () => {
+const DetalleProducto = () => {
     return (
         <div className='app'>
                 <style jsx>{`
@@ -150,7 +149,7 @@ const RegistroUsuario = () => {
                     footer {
                         background-color: #f0f0f0;
                         padding: 2rem;
-                        margin-top: 4rem;
+                        margin-top: 3rem;
                     }
                     .footer-content {
                         display: flex;
@@ -184,81 +183,75 @@ const RegistroUsuario = () => {
                     }
                 `}</style>
 
-            {/* Inicio del Header */}
+            {/* Inicio del Banner */}
             <header>
-                    <div className='logo'>essence</div>
-                    <nav>
-                        <ul>
-                            <li>Inicio</li>
-                            <li>Tienda</li>
-                            {/* <li>Perfil</li> */}
-                            {/* <li>Perfumes</li> */}
-                            <li>Contacto</li>
-                        </ul>
-                    </nav>
-                    <div className='icons'>
-                        <span>🔍</span>
-                        <span>👤</span>
-                        <span className='cart-icon'>
-                            🛒
-                            <span className='cart-count'>3</span>
-                        </span>
+                <div className='logo'>essence</div>
+                <nav>
+                    <ul>
+                        <li>Inicio</li>
+                        <li>Tienda</li>
+                        <li>Contacto</li>
+                    </ul>
+                </nav>
+                <div className='icons'>
+                    <span>🔍</span>
+                    <span>👤</span>
+                    <span className='cart-icon'>
+                        🛒
+                        <span className='cart-count'>3</span>
+                    </span>
+                </div>
+            </header>
+            {/* Fin del Banner */}
+
+            {/* Inicio del Contenido Principal */}
+            <main style={{ display: 'flex', justifyContent: 'center', padding: '110px' }}>
+                <div style={{ display: 'flex', gap: '20px', width: '80%', justifyContent: 'center' }}>
+                    {/* Producto */}
+                    <div style={{ width: '50%', border: '1px solid #ccc', padding: '20px', backgroundColor: '#333', color: '#fff' }}>
+                        <div style={{ height: '300px', marginBottom: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#222' }}>
+                            <p>PRODUCTO</p>
+                        </div>
+                        <div>
+                            <p style={{ textAlign: 'left', marginBottom: '5px' }}>NOMBRE DEL PRODUCTO</p>
+                            <p style={{ textAlign: 'left', fontWeight: 'bold' }}>$99.990</p>
+                        </div>
                     </div>
-                </header>
-            {/* Fin del Header */}
-            
-            <main style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
-                <div style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-                    <h3 style={{ textAlign: 'center' }}>Registro de Usuario</h3>
-                    <form>
-                        <div style={{ marginBottom: '15px' }}>
-                            <label>Nombre</label>
-                            <input type="text" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
+
+                    {/* Descripción */}
+                    <div style={{ width: '50%', border: '1px solid #ccc', padding: '20px', backgroundColor: '#ddd' }}>
+                        <div style={{ height: '300px', marginBottom: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#bbb' }}>
+                            <p>DESCRIPCION</p>
                         </div>
-                        <div style={{ marginBottom: '15px' }}>
-                            <label>Apellido</label>
-                            <input type="text" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
-                        </div>
-                        <div style={{ marginBottom: '15px' }}>
-                            <label>Email</label>
-                            <input type="email" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
-                        </div>
-                        <div style={{ marginBottom: '20px' }}>
-                            <label>Contraseña</label>
-                            <input type="password" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
-                        </div>
-                        <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
-                            Registrarse
+                        <button style={{ width: '100%', padding: '10px', backgroundColor: '#555', color: '#fff', border: 'none' }}>
+                            AGREGAR AL CARRITO
                         </button>
-                    </form>
+                    </div>
                 </div>
             </main>
-            
+            {/* Fin del Contenido Principal */}
+
             {/* Inicio del Footer */}
             <footer>
-                    <div className='footer-content'>
-                        <div className='logo'>essence</div>
-                        <div className='subscribe'>
-                            <input
-                                type='email'
-                                placeholder='Ingresa tu email'
-                            />
-                            <button>Suscribete</button>
-                        </div>
-                        <div className='social-icons'>
-                            <span>FB</span>
-                            <span>TW</span>
-                            <span>IG</span>
-                        </div>
+                <div className='footer-content'>
+                    <div className='logo'>essence</div>
+                    <div className='subscribe'>
+                        <input type='email' placeholder='Ingresa tu email' />
+                        <button>Suscribete</button>
                     </div>
-                    <div className='footer-bottom'>
-                        © 2023 essence. Derechos reservados. | Politicas de
-                        privacidad | terminos de servicio
+                    <div className='social-icons'>
+                        <span>FB</span>
+                        <span>TW</span>
+                        <span>IG</span>
                     </div>
-                </footer>
+                </div>
+                <div className='footer-bottom'>
+                    © 2023 essence. Derechos reservados. | Políticas de privacidad | Términos de servicio
+                </div>
+            </footer>
             {/* Fin del Footer */}
         </div>
     );
 };
 
-export default RegistroUsuario;
+export default DetalleProducto;

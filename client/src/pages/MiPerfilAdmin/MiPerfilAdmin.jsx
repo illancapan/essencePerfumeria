@@ -1,6 +1,7 @@
 import React from 'react';
+import Header from '../../components/Header';
 
-const InicioSesion = () => {
+const MiPerfilAdmin = () => {
     return (
         <div className='app'>
                 <style jsx>{`
@@ -8,43 +9,6 @@ const InicioSesion = () => {
                         font-family: Arial, sans-serif;
                         min-height: 100vh;
                         background-color: white;
-                    }
-                    header {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 1rem 2rem;
-                        background-color: white;
-                    }
-                    .logo {
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                    }
-                    nav ul {
-                        display: flex;
-                        list-style-type: none;
-                        gap: 1.5rem;
-                    }
-                    .icons {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .cart-icon {
-                        position: relative;
-                    }
-                    .cart-count {
-                        position: absolute;
-                        top: -8px;
-                        right: -8px;
-                        background-color: red;
-                        color: white;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 0.75rem;
                     }
                     .hero {
                         position: relative;
@@ -149,7 +113,7 @@ const InicioSesion = () => {
                     footer {
                         background-color: #f0f0f0;
                         padding: 2rem;
-                        margin-top: 4rem;
+                        margin-top: 3rem;
                     }
                     .footer-content {
                         display: flex;
@@ -182,74 +146,84 @@ const InicioSesion = () => {
                         color: #666;
                     }
                 `}</style>
-                
+
             {/* Inicio del Header */}
-            <header>
-                    <div className='logo'>essence</div>
-                    <nav>
-                        <ul>
-                            <li>Inicio</li>
-                            <li>Tienda</li>
-                            {/* <li>Perfil</li> */}
-                            {/* <li>Perfumes</li> */}
-                            <li>Contacto</li>
-                        </ul>
-                    </nav>
-                    <div className='icons'>
-                        <span>🔍</span>
-                        <span>👤</span>
-                        <span className='cart-icon'>
-                            🛒
-                            <span className='cart-count'>3</span>
-                        </span>
-                    </div>
-                </header>
+            <Header/>
             {/* Fin del Header */}
             
-            <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
-                <div style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-                    <h2 style={{ textAlign: 'center' }}>Inicio de Sesión</h2>
-                    <form>
-                        <div style={{ marginBottom: '15px' }}>
-                            <label>Nombre de Usuario</label>
-                            <input type="text" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
+            <main style={{ padding: '220px', display: 'flex', justifyContent: 'center' }}>
+                <div style={{ width: '80%', border: '1px solid #ccc', borderRadius: '8px', padding: '20px' }}>
+                    <h2 style={{ textAlign: 'center' }}>Gestión de Productos</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: '100px 2fr 100px 150px', gap: '10px', alignItems: 'center' }}>
+                        {/* Producto */}
+                        <div>
+                            <img src='/placeholder.svg' alt='Producto' style={{ width: '100%' }} />
                         </div>
-                        <div style={{ marginBottom: '20px' }}>
-                            <label>Contraseña</label>
-                            <input type="password" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
+
+                        {/* Descripción */}
+                        <div>
+                            <input
+                                type='text'
+                                placeholder='Descripción del producto'
+                                style={{ width: '100%', padding: '2px', marginBottom: '10px' }}
+                            />
                         </div>
-                        <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
-                            Entrar
-                        </button>
-                    </form>
+
+                        {/* Precio */}
+                        <div>
+                            <input
+                                type='number'
+                                placeholder='Precio'
+                                style={{ width: '100%', padding: '2px', marginBottom: '10px' }}
+                            />
+                        </div>
+
+                        {/* Cantidad */}
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            
+                            <input
+                                type='number'
+                                defaultValue={1}
+                                style={{ width: '50px', textAlign: 'center', padding: '2px', marginBottom: '10px' }}
+                            />
+                            
+                        </div>
+
+                        {/* Botones de Acción */}
+                        <div style={{ gridColumn: 'span 4', textAlign: 'center', marginTop: '20px' }}>
+                            <button style={{ padding: '10px 20px', marginRight: '10px', backgroundColor: '#28a745', color: '#fff', border: 'none', borderRadius: '4px' }}>
+                                Subir Producto
+                            </button>
+                            <button style={{ padding: '10px 20px', backgroundColor: '#dc3545', color: '#fff', border: 'none', borderRadius: '4px' }}>
+                                Borrar Producto
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </main>
+            {/* Fin de la nueva sección main */}
             
             {/* Inicio del Footer */}
             <footer>
-                    <div className='footer-content'>
-                        <div className='logo'>essence</div>
-                        <div className='subscribe'>
-                            <input
-                                type='email'
-                                placeholder='Ingresa tu email'
-                            />
-                            <button>Suscribete</button>
-                        </div>
-                        <div className='social-icons'>
-                            <span>FB</span>
-                            <span>TW</span>
-                            <span>IG</span>
-                        </div>
+                <div className='footer-content'>
+                    <div className='logo'>essence</div>
+                    <div className='subscribe'>
+                        <input type='email' placeholder='Ingresa tu email' />
+                        <button>Suscribete</button>
                     </div>
-                    <div className='footer-bottom'>
-                        © 2023 essence. Derechos reservados. | Politicas de
-                        privacidad | terminos de servicio
+                    <div className='social-icons'>
+                        <span>FB</span>
+                        <span>TW</span>
+                        <span>IG</span>
                     </div>
-                </footer>
+                </div>
+                <div className='footer-bottom'>
+                    © 2023 essence. Derechos reservados. | Políticas de privacidad | Términos de servicio
+                </div>
+            </footer>
             {/* Fin del Footer */}
         </div>
     );
 };
 
-export default InicioSesion;
+export default MiPerfilAdmin;

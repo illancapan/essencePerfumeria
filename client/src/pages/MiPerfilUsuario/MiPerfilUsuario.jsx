@@ -1,6 +1,7 @@
 import React from 'react';
+import Header from '../../components/Header';
 
-const PoVUsuario = () => {
+const MiPerfilUsuario = () => {
     return (
         <div className='app'>
                 <style jsx>{`
@@ -8,43 +9,6 @@ const PoVUsuario = () => {
                         font-family: Arial, sans-serif;
                         min-height: 100vh;
                         background-color: white;
-                    }
-                    header {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 1rem 2rem;
-                        background-color: white;
-                    }
-                    .logo {
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                    }
-                    nav ul {
-                        display: flex;
-                        list-style-type: none;
-                        gap: 1.5rem;
-                    }
-                    .icons {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .cart-icon {
-                        position: relative;
-                    }
-                    .cart-count {
-                        position: absolute;
-                        top: -8px;
-                        right: -8px;
-                        background-color: red;
-                        color: white;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 0.75rem;
                     }
                     .hero {
                         position: relative;
@@ -184,26 +148,7 @@ const PoVUsuario = () => {
                 `}</style>
 
             {/* Inicio del Header */}
-            <header>
-                    <div className='logo'>essence</div>
-                    <nav>
-                        <ul>
-                            <li>Inicio</li>
-                            <li>Tienda</li>
-                            {/* <li>Perfil</li> */}
-                            {/* <li>Perfumes</li> */}
-                            <li>Contacto</li>
-                        </ul>
-                    </nav>
-                    <div className='icons'>
-                        <span>🔍</span>
-                        <span>👤</span>
-                        <span className='cart-icon'>
-                            🛒
-                            <span className='cart-count'>3</span>
-                        </span>
-                    </div>
-                </header>
+            <Header/>
             {/* Fin del Header */}
             
             <main style={{ padding: '80px', display: 'flex', justifyContent: 'center' }}>
@@ -228,7 +173,7 @@ const PoVUsuario = () => {
                                 <label>Contraseña</label>
                                 <input type="password" style={{ width: '100%', padding: '10px', marginTop: '5px' }} />
                             </div>
-                            <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
+                            <button type="submit" style={{ width: '30%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
                                 Modificar o agregar
                             </button>
                         </form>
@@ -277,4 +222,4 @@ const PoVUsuario = () => {
     );
 };
 
-export default PoVUsuario;
+export default MiPerfilUsuario;

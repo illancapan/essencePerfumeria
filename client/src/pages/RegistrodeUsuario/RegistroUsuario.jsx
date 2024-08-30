@@ -1,23 +1,16 @@
 
-import { useContext } from 'react'
-import { ProductoContext } from '../../context/ProductoContext'
-import Header from '../../components/Header'
+import React from 'react';
+import Header from '../../components/Header';
 
-function PrincipalMaqueta() {
-    const { productos, cargando, error } = useContext(ProductoContext)
-
-    if (cargando) return <p>Cargando...</p>
-    if (error) return <p>Error: {error.message}</p>
+const RegistroUsuario = () => {
     return (
-        <>
-            <div className='app'>
+        <div className='app'>
                 <style jsx>{`
                     .app {
                         font-family: Arial, sans-serif;
                         min-height: 100vh;
                         background-color: white;
                     }
-                    
                     .hero {
                         position: relative;
                         height: calc(100vh - 80px);
@@ -155,62 +148,39 @@ function PrincipalMaqueta() {
                     }
                 `}</style>
 
-
-                <Header/>
-
-                <section className='hero'>
-                    <img src='/placeholder.svg' alt='Hero Image' />
-                    <div className='hero-content'>
-                        <h1>essence</h1>
-                    </div>
-                    <button className='hero-nav hero-nav-left'>←</button>
-                    <button className='hero-nav hero-nav-right'>→</button>
-                </section>
-
-                <section className='intro'>
-                    <h2>simple</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                    </p>
-                </section>
-
-                <section className='products'>
-                    <div className='product-filters'>
-                        <ul className='filter-options'>
-                            <li>Todos</li>
-                            <li>Citricos</li>
-                            <li>Frutales</li>
-                            <li>Hombre</li>
-                            <li>Mujer</li>
-                        </ul>
-                        <select>
-                            <option>Filtro dar funcion :D</option>
-                        </select>
-                    </div>
-
-                    <div className='product-grid'>
-                        {productos.map((product) => (
-                            <div key={product.id} className='product-card'>
-                                <img src={product.img} alt={product.name} />
-                                <h3>{product.name}</h3>
-                                <div className='product-info'>
-                                    <span>{product.price}</span>
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className='pagination'>
-                        {[1, 2, 3, 4, 5].map((page) => (
-                            <button key={page}>{page}</button>
-                        ))}
-                    </div>
-                </section>
-
-                <footer>
+            {/* Inicio del Header */}
+            <Header/>
+            {/* Fin del Header */}
+            
+            <main style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
+                <div style={{ width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
+                    <h3 style={{ textAlign: 'center' }}>Registro de Usuario</h3>
+                    <form>
+                        <div style={{ marginBottom: '15px' }}>
+                            <label>Nombre</label>
+                            <input type="text" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
+                        </div>
+                        <div style={{ marginBottom: '15px' }}>
+                            <label>Apellido</label>
+                            <input type="text" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
+                        </div>
+                        <div style={{ marginBottom: '15px' }}>
+                            <label>Email</label>
+                            <input type="email" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
+                        </div>
+                        <div style={{ marginBottom: '20px' }}>
+                            <label>Contraseña</label>
+                            <input type="password" style={{ width: '100%', padding: '2px', marginTop: '5px' }} />
+                        </div>
+                        <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px' }}>
+                            Registrarse
+                        </button>
+                    </form>
+                </div>
+            </main>
+            
+            {/* Inicio del Footer */}
+            <footer>
                     <div className='footer-content'>
                         <div className='logo'>essence</div>
                         <div className='subscribe'>
@@ -231,9 +201,9 @@ function PrincipalMaqueta() {
                         privacidad | terminos de servicio
                     </div>
                 </footer>
-            </div>
-        </>
-    )
-}
+            {/* Fin del Footer */}
+        </div>
+    );
+};
 
-export default PrincipalMaqueta
+export default RegistroUsuario;
