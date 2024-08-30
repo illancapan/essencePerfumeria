@@ -1,6 +1,10 @@
-import React from 'react'
-
+import { useContext } from 'react'
+import { ProductoContext } from '../../context/ProductoContext'
 function PrincipalMaqueta() {
+    const { productos, cargando, error } = useContext(ProductoContext)
+
+    if (cargando) return <p>Cargando...</p>
+    if (error) return <p>Error: {error.message}</p>
     return (
         <>
             <div className='app'>
@@ -190,8 +194,6 @@ function PrincipalMaqueta() {
                         <ul>
                             <li>Inicio</li>
                             <li>Tienda</li>
-                            {/* <li>Perfil</li> */}
-                            {/* <li>Perfumes</li> */}
                             <li>Contacto</li>
                         </ul>
                     </nav>
@@ -238,17 +240,12 @@ function PrincipalMaqueta() {
                     </div>
 
                     <div className='product-grid'>
-                        {[...Array(16)].map((_, index) => (
-                            <div key={index} className='product-card'>
-                                <img
-                                    src={`/placeholder.svg?text=Product ${
-                                        index + 1
-                                    }`}
-                                    alt={`Product ${index + 1}`}
-                                />
-                                <h3>Nombre Producto</h3>
+                        {productos.map((product) => (
+                            <div key={product.id} className='product-card'>
+                                <img src={product.img} alt={product.name} />
+                                <h3>{product.name}</h3>
                                 <div className='product-info'>
-                                    <span>$99.999</span>
+                                    <span>{product.price}</span>
                                     <span>★★★★☆</span>
                                 </div>
                             </div>

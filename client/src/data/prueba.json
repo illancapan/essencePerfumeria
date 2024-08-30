@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Perfume Cítrico",
+        "price": 99999,
+        "category": "Cítrico",
+        "rating": 4,
+        "image": "https://images.pexels.com/photos/3640668/pexels-photo-3640668.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Perfume Floral",
+        "price": 89999,
+        "category": "Floral",
+        "rating": 5,
+        "image": "https://images.pexels.com/photos/1557980/pexels-photo-1557980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": 3,
+        "name": "Perfume Amaderado",
+        "price": 109999,
+        "category": "Amaderado",
+        "rating": 3,
+        "image": "https://images.pexels.com/photos/932577/pexels-photo-932577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+]
