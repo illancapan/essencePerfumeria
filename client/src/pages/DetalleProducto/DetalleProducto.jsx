@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header';
 
 const DetalleProducto = () => {
     return (
@@ -8,43 +10,6 @@ const DetalleProducto = () => {
                         font-family: Arial, sans-serif;
                         min-height: 100vh;
                         background-color: white;
-                    }
-                    header {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 1rem 2rem;
-                        background-color: white;
-                    }
-                    .logo {
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                    }
-                    nav ul {
-                        display: flex;
-                        list-style-type: none;
-                        gap: 1.5rem;
-                    }
-                    .icons {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .cart-icon {
-                        position: relative;
-                    }
-                    .cart-count {
-                        position: absolute;
-                        top: -8px;
-                        right: -8px;
-                        background-color: red;
-                        color: white;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 0.75rem;
                     }
                     .hero {
                         position: relative;
@@ -146,62 +111,10 @@ const DetalleProducto = () => {
                         background-color: white;
                         cursor: pointer;
                     }
-                    footer {
-                        background-color: #f0f0f0;
-                        padding: 2rem;
-                        margin-top: 3rem;
-                    }
-                    .footer-content {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    }
-                    .subscribe {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .subscribe input {
-                        padding: 0.5rem;
-                        border: 1px solid #ccc;
-                    }
-                    .subscribe button {
-                        padding: 0.5rem 1rem;
-                        background-color: black;
-                        color: white;
-                        border: none;
-                        cursor: pointer;
-                    }
-                    .social-icons {
-                        display: flex;
-                        gap: 1rem;
-                    }
-                    .footer-bottom {
-                        text-align: center;
-                        margin-top: 2rem;
-                        font-size: 0.875rem;
-                        color: #666;
-                    }
                 `}</style>
 
             {/* Inicio del Banner */}
-            <header>
-                <div className='logo'>essence</div>
-                <nav>
-                    <ul>
-                        <li>Inicio</li>
-                        <li>Tienda</li>
-                        <li>Contacto</li>
-                    </ul>
-                </nav>
-                <div className='icons'>
-                    <span>🔍</span>
-                    <span>👤</span>
-                    <span className='cart-icon'>
-                        🛒
-                        <span className='cart-count'>3</span>
-                    </span>
-                </div>
-            </header>
+            <Header/>
             {/* Fin del Banner */}
 
             {/* Inicio del Contenido Principal */}
@@ -232,23 +145,7 @@ const DetalleProducto = () => {
             {/* Fin del Contenido Principal */}
 
             {/* Inicio del Footer */}
-            <footer>
-                <div className='footer-content'>
-                    <div className='logo'>essence</div>
-                    <div className='subscribe'>
-                        <input type='email' placeholder='Ingresa tu email' />
-                        <button>Suscribete</button>
-                    </div>
-                    <div className='social-icons'>
-                        <span>FB</span>
-                        <span>TW</span>
-                        <span>IG</span>
-                    </div>
-                </div>
-                <div className='footer-bottom'>
-                    © 2023 essence. Derechos reservados. | Políticas de privacidad | Términos de servicio
-                </div>
-            </footer>
+            <Footer/>
             {/* Fin del Footer */}
         </div>
     );
