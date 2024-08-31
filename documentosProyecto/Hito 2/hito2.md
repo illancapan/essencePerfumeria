@@ -27,7 +27,7 @@
 
 ## 5. Preparar la aplicación para el consumo de datos siguiendo el contrato definido en el hito anterior.
 
-
+![Captura json](img/req5a.JPG) ![Captura consumo de datos](img/req5b.JPG)
 
 ---
 
