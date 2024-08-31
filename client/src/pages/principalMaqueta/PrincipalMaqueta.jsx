@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { ProductoContext } from '../../context/ProductoContext'
 import Header from '../../components/header/Header'
+import fondo from '../../assets/fondo.jpg'
 import Footer from '../../components/footer/Footer'
 
 function PrincipalMaqueta() {
@@ -123,10 +124,8 @@ function PrincipalMaqueta() {
                 <Header />
 
                 <section className='hero'>
-                    <img src='/placeholder.svg' alt='Hero Image' />
-                    <div className='hero-content'>
-                        <h1>essence</h1>
-                    </div>
+                    <img src={fondo} alt='Hero Image' />
+                    
                     <button className='hero-nav hero-nav-left'>←</button>
                     <button className='hero-nav hero-nav-right'>→</button>
                 </section>

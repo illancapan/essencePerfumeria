@@ -14,12 +14,9 @@ function Header() {
                         <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/'>Inicio</NavLink>
                         <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/registro'>Registrarse</NavLink>
                         <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/login'>Iniciar sesion</NavLink>
-                        {/* <li>Perfil</li> */}
-                        {/* <li>Perfumes</li> */}
                     </ul>
                 </nav>
             <div className={styles.icons}>
-                    <span>🔍</span>
                     <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/profile'>👤</NavLink>
                     <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/carro'>🛒</NavLink>
                 </div>
