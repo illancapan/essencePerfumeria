@@ -9,7 +9,7 @@ Este proyecto consiste en el desarrollo de una aplicación web para un marketpla
 -   [Hito 1 Diseño y Prototipo](documentosProyecto/Hito%201/hito1.md) 
     (Incluye el diseño de la interfaz gráfica, definición de la navegación, listado de dependencias, diseño de la base de datos y contrato de datos de la API REST).
 
--   [Hito 2](documentosProyecto\Hito%202\hito2.md)  
+-   [Hito 2 Desarrollo Frontend](documentosProyecto\Hito%202\hito2.md)  
     (Incluye capturas del codigo y web de creacion de proyecto, componentes y hooks, navegacion de vistas por React Router, Context API y consumo de datos).
 
 -   [Hito 3](path-to-hito-3) 
