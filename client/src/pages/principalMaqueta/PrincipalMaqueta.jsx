@@ -1,4 +1,3 @@
-
 import { useContext } from 'react'
 import { ProductoContext } from '../../context/ProductoContext'
 import Header from '../../components/header/Header'
@@ -18,7 +17,7 @@ function PrincipalMaqueta() {
                         min-height: 100vh;
                         background-color: white;
                     }
-                    
+
                     .hero {
                         position: relative;
                         height: calc(100vh - 80px);
@@ -119,11 +118,9 @@ function PrincipalMaqueta() {
                         background-color: white;
                         cursor: pointer;
                     }
-                    
                 `}</style>
 
-
-                <Header/>
+                <Header />
 
                 <section className='hero'>
                     <img src='/placeholder.svg' alt='Hero Image' />
@@ -160,7 +157,7 @@ function PrincipalMaqueta() {
                     <div className='product-grid'>
                         {productos.map((product) => (
                             <div key={product.id} className='product-card'>
-                                <img src={product.img} alt={product.name} />
+                                <img src={product.image} alt={product.name} />
                                 <h3>{product.name}</h3>
                                 <div className='product-info'>
                                     <span>{product.price}</span>
@@ -177,7 +174,7 @@ function PrincipalMaqueta() {
                     </div>
                 </section>
 
-                <Footer/>
+                <Footer />
             </div>
         </>
     )
