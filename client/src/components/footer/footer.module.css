@@ -31,6 +31,9 @@ footer {
     display: flex;
     gap: 1rem;
 }
+.socialIcons a{
+    color: black;
+}
 .footerBottom {
     text-align: center;
     margin-top: 2rem;
