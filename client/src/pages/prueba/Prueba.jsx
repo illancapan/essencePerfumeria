@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-import jsonData from '../../data/prueba.json' // Ajusta la ruta según sea necesario
+import jsonData from '../../data/prueba.json'
 
 const PrincipalMaqueta = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        // Usa los datos importados directamente
         setProducts(jsonData)
     }, [])
 

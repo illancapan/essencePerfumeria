@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
-import styles from './InicioSesion.module.css' // Importar el módulo CSS
+import styles from './InicioSesion.module.css'
 
 const InicioSesion = () => {
     const [usuario, setUsuario] = useState('')
