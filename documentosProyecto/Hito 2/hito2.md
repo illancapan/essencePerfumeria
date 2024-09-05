@@ -1,4 +1,4 @@
-# Hito 1 - Desarrollo Front End
+# Hito 2 - Desarrollo Front End
 
 ## 1. Crear un nuevo proyecto usando npx e instalar las dependencias.
 
