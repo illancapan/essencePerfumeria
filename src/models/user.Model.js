@@ -1,5 +1,3 @@
-// src/models/userModel.js
-
 import { pool } from '../../database/config.js';
 
 class UserModel {
