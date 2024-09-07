@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import morgan from 'morgan';
-import router from './src/routes/routes.js';  
+import productsRoutes from './src/routes/products.routes.js';  
 import { registerUser, loginUser } from './src/controllers/user.Controller.js'; 
 import { authenticateToken } from './middleware/authenticateToken.js';
 
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(morgan('dev'));
 
 // Rutas
-app.use('/', router);
+app.use('/', productsRoutes);
 app.post('/api/register', registerUser);
 app.post('/api/login', loginUser);
 app.get('/api/protected-route', authenticateToken, (req, res) => {
