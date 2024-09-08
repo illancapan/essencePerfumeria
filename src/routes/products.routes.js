@@ -1,10 +1,17 @@
-import express from 'express';
-import { productsController } from '../controllers/products.controllers.js';
+import express from 'express'
+import { productsController } from '../controllers/products.controllers.js'
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/perfumes', productsController.getProducts)
 router.get('/perfumes/:id', productsController.getProductDetail)
 
+//AGREGAR NUEVO PRODUCTO
+// router.post('/perfumes', productsController.addProduct)
+router.post('/perfumes', productsController.addProduct)
 
-export default router;
+//ACTUALIZAR PRODUCTO
+// router.put('/perfumes/:id', productsController.updateProduct)
+router.put('/perfumes/:id', productsController.updateProduct)
+
+export default router
