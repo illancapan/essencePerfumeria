@@ -1,6 +1,6 @@
-import { pool } from "../../database/config.js"
+import { pool } from '../../database/config.js'
 
-const getData = async () =>{
+const getData = async () => {
     const sql = 'SELECT * FROM productos'
     try {
         const response = await pool.query(sql)
@@ -11,17 +11,89 @@ const getData = async () =>{
 }
 
 const getProductDetail = async (id) => {
-    const sql = 'SELECT * FROM productos WHERE id = $1'; 
+    const sql = 'SELECT * FROM productos WHERE id = $1'
     try {
-        const response = await pool.query(sql, [id]);
-        return response.rows[0];
+        const response = await pool.query(sql, [id])
+        return response.rows[0]
     } catch (error) {
-        console.error(error.message);
-        throw new Error('Error al obtener los detalles del producto');
+        console.error(error.message)
+        throw new Error('Error al obtener los detalles del producto')
+    }
+}
+const addProduct = async (product) => {
+    const {
+        nombre,
+        descripcion,
+        precio,
+        descuento,
+        stock,
+        fragancia_id,
+        imagen,
+    } = product
+
+    const sql = `
+        INSERT INTO productos (nombre, descripcion, precio, descuento, stock, fragancia_id, imagen)
+        VALUES ($1, $2, $3, $4, $5, $6, $7)
+        RETURNING *;
+    `
+
+    try {
+        const response = await pool.query(sql, [
+            nombre,
+            descripcion,
+            precio,
+            descuento,
+            stock,
+            fragancia_id,
+            imagen,
+        ])
+        return response.rows[0]
+    } catch (error) {
+        console.error('Error al agregar el producto:', error.message)
+        throw new Error('Error al agregar el producto')
+    }
+}
+
+const updateProduct = async (id, product) => {
+    const {
+        nombre,
+        descripcion,
+        precio,
+        descuento,
+        stock,
+        fragancia_id,
+        imagen,
+    } = product
+    const sql = `
+        UPDATE productos
+        SET nombre = $1, descripcion = $2, precio = $3, descuento = $4, stock = $5, fragancia_id = $6, imagen = $7
+        WHERE id = $8
+        RETURNING *;
+    `
+    try {
+        const response = await pool.query(sql, [
+            nombre,
+            descripcion,
+            precio,
+            descuento,
+            stock,
+            fragancia_id,
+            imagen,
+            id,
+        ])
+        if (response.rows.length === 0) {
+            throw new Error('Producto no encontrado')
+        }
+        return response.rows[0]
+    } catch (error) {
+        console.error('Error al actualizar el producto:', error.message)
+        throw new Error('Error al actualizar el producto')
     }
 }
 
 export const productsModels = {
     getData,
-    getProductDetail
+    getProductDetail,
+    addProduct,
+    updateProduct,
 }
