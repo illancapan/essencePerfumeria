@@ -13,7 +13,7 @@ Este proyecto consiste en el desarrollo de una aplicación web para un marketpla
     (Incluye capturas del codigo y web de creacion de proyecto, componentes y hooks, navegacion de vistas por React Router, Context API y consumo de datos).
 
 -   [Hito 3 Desarrollo Backend](documentosProyecto/Hito%203/hito3.md) 
-    (Descripción del tercer hito del proyecto).
+    (Incluye capturas del codigo del codigo, utilizacion del paquete pg, autenticacion y autorizacion de usuarios con jwt, utilizacion de paquete CORS, middlewares, realizacion de test ).
 
 -   [Hito 4](path-to-hito-4)  
     (Descripción del cuarto hito del proyecto).

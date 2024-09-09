@@ -7,7 +7,8 @@
       "dev": "node --watch server.js",
       "start": "node server.js",
       "test": "jest",
-      "testCors": "jest src/tests/cors.test.js"
+      "testCors": "jest src/tests/cors.test.js",
+      "testProducts": "jest src/tests/products.test.js"
     },
     "keywords": [],
     "author": "",
