@@ -34,6 +34,6 @@
 ## 6. Realizar test de por lo menos 4 rutas de la API REST comprobando los códigos de estados de diferentes escenarios. (Falta las rutas productos para poder completar este punto)
 
 
-![]() ![]()
+![Captura test rutas resgistro e inicio de sesion](img/req3b.JPG) ![Captura test rutas producto](img/req6a.JPG)
 
 ---

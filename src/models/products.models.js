@@ -1,12 +1,26 @@
 import { pool } from '../../database/config.js'
 
-const getData = async () => {
-    const sql = 'SELECT * FROM productos'
+
+const getData = async (fragancia_id, orderBy) => {
+    let sql = 'SELECT * FROM productos WHERE 1=1';
+    const params = [];
+    let paramIndex = 1;
+
+    if (fragancia_id) {
+        sql += ` AND fragancia_id = $${paramIndex++}`;
+        params.push(fragancia_id);
+    }
+
+    if (orderBy) {
+        sql += ' ORDER BY precio ' + (orderBy === 'asc' ? 'ASC' : 'DESC');
+    }
+
     try {
-        const response = await pool.query(sql)
-        return response.rows
+        const response = await pool.query(sql, params);
+        return response.rows;
     } catch (error) {
-        console.error(error.message)
+        console.error(error.message);
+        throw new Error('Error al obtener los productos');
     }
 }
 

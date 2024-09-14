@@ -9,6 +9,7 @@ import DetalleProducto from './pages/detalleProducto/DetalleProducto'
 import { ProductosProvider } from './context/ProductoContext'
 import { ApiProvider } from './context/ApiContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import CarroCompras from './pages/carroDeCompras/CarroCompras'
 
 function App() {
     return (
@@ -31,9 +32,12 @@ function App() {
                         {/* Ruta para la vista Mi perfil Admin */}
                         <Route path='/admin' element={<MiPerfilAdmin />} />
 
+                        {/* Ruta para ver el carro de compras */}
+                        <Route path='/carrito' element={<CarroCompras />} />
+
                         {/* Ruta para la vista de Detalle de Producto */}
                         <Route
-                            path='/product/:id'
+                            path='/perfume/:id'
                             element={<DetalleProducto />}
                         />
                     </Routes>

@@ -17,8 +17,8 @@ function Header() {
                     </ul>
                 </nav>
             <div className={styles.icons}>
-                    <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/profile'>👤</NavLink>
-                    <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/carro'>🛒</NavLink>
+                    <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/profile'><i class="fa-solid fa-user"></i></NavLink>
+                    <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/carrito'><i class="fa-solid fa-cart-shopping"></i></NavLink>
                 </div>
                 </header>
     </div>
