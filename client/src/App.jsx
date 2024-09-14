@@ -33,7 +33,7 @@ function App() {
 
                         {/* Ruta para la vista de Detalle de Producto */}
                         <Route
-                            path='/product/:id'
+                            path='/perfume/:id'
                             element={<DetalleProducto />}
                         />
                     </Routes>

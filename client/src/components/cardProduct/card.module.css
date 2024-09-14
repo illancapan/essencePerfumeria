@@ -2,13 +2,17 @@
     display: grid;
     grid-template-columns: repeat(
         auto-fill,
-        minmax(200px, 1fr)
+        minmax(250px, 1fr)
     );
     gap: 2rem;
 }
 .productCard {
     background-color: #f0f0f0;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
 }
 .productCard img {
     width: 100%;
