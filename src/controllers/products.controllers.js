@@ -1,9 +1,9 @@
 import { productsModels } from '../models/products.models.js'
 
 const getProducts = async (req, res) => {
-    const { fragancia_id, genero, orderBy } = req.query;
+    const { fragancia_id, orderBy } = req.query;
     try {
-        const response = await productsModels.getData(fragancia_id, genero, orderBy)
+        const response = await productsModels.getData(fragancia_id, orderBy)
         res.status(200).json(response)
     } catch (error) {
         res.status(500).json(error.message)

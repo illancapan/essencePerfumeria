@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './card.module.css'
 import { useContext } from 'react'
 import { ProductoContext } from '../../context/ProductoContext'
+import { Link } from 'react-router-dom';
 
 function Card() {
     const { productos } = useContext(ProductoContext)
@@ -19,6 +20,7 @@ function Card() {
                             <span>{product.precio}</span>
                             <span>★★★★☆</span>
                         </div>
+                        <Link to={`/perfume/${product.id}`}><button>Ver detalle</button></Link>
                 </div>
             ))}
         </div>

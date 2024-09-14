@@ -6,7 +6,7 @@ import Footer from '../../components/footer/Footer'
 import Card from '../../components/cardProduct/Card'
 
 function PrincipalMaqueta() {
-    const { cargando, error, setFragancia_id, setGenero, setOrderBy } = useContext(ProductoContext)
+    const { cargando, error, setFragancia_id, setOrderBy } = useContext(ProductoContext)
 
     if (cargando) return <p>Cargando...</p>
     if (error) return <p>Error: {error.message}</p>
@@ -121,12 +121,10 @@ function PrincipalMaqueta() {
                 <section className='products'>
                 <div className='product-filters'>
             <ul className='filter-options'>
-                <li onClick={() => { setFragancia_id(''); setGenero(''); }}>Todos</li>
+                <li onClick={() => { setFragancia_id('') }}>Todos</li>
                 <li onClick={() => setFragancia_id('1')}>Citricos</li>
                 <li onClick={() => setFragancia_id('2')}>Florales</li>
                 <li onClick={() => setFragancia_id('3')}>Maderas</li>
-                <li onClick={() => setGenero('hombre')}>Hombre</li>
-                <li onClick={() => setGenero('mujer')}>Mujer</li>
             </ul>
             <select onChange={(e) => setOrderBy(e.target.value)}>
                 <option value="">Ordenar por precio</option>

@@ -1,7 +1,7 @@
 import { pool } from '../../database/config.js'
 
 
-const getData = async (fragancia_id, genero, orderBy) => {
+const getData = async (fragancia_id, orderBy) => {
     let sql = 'SELECT * FROM productos WHERE 1=1';
     const params = [];
     let paramIndex = 1;
@@ -9,11 +9,6 @@ const getData = async (fragancia_id, genero, orderBy) => {
     if (fragancia_id) {
         sql += ` AND fragancia_id = $${paramIndex++}`;
         params.push(fragancia_id);
-    }
-
-    if (genero) {
-        sql += ` AND genero = $${paramIndex++}`;
-        params.push(genero);
     }
 
     if (orderBy) {
