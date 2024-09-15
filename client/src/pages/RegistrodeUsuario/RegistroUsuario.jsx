@@ -9,8 +9,9 @@ const RegistroUsuario = () => {
     const [email, setEmail] = useState('')
     const [contrasena, setContrasena] = useState('')
     const [mensaje, setMensaje] = useState('')
+    const [error, setError] = useState('')
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         const usuario = {
@@ -20,14 +21,32 @@ const RegistroUsuario = () => {
             contrasena,
         }
 
-        console.log('Datos del usuario:', usuario)
+        try {
+            const response = await fetch('http://localhost:3000/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(usuario),
+            })
 
-        setMensaje('Registro exitoso')
+            const result = await response.json()
 
-        setNombre('')
-        setApellido('')
-        setEmail('')
-        setContrasena('')
+            if (response.ok) {
+                setMensaje('Registro exitoso')
+                setError('')
+                setNombre('')
+                setApellido('')
+                setEmail('')
+                setContrasena('')
+            } else {
+                setMensaje('')
+                setError(result.message || 'Error en el registro')
+            }
+        } catch (error) {
+            setMensaje('')
+            setError('Error en la solicitud: ' + error.message)
+        }
     }
 
     return (
@@ -75,6 +94,7 @@ const RegistroUsuario = () => {
                         <button type='submit'>Registrarse</button>
                     </form>
                     {mensaje && <p className={styles.mensaje}>{mensaje}</p>}
+                    {error && <p className={styles.error}>{error}</p>}
                 </div>
             </main>
 

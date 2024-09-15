@@ -9,7 +9,7 @@ export const CarroProvider = ({ children }) => {
 
     const fetchCarrito = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/carrito/1')
+            const response = await fetch('http://localhost:3000/api/carrito/2')
             if (!response.ok) {
                 throw new Error('Network response was not ok')
             }
