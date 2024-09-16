@@ -21,7 +21,7 @@ function App() {
                         <Route path='/' element={<PrincipalMaqueta />} />
 
                         {/* Ruta para la vista de Registro de Usuario */}
-                        <Route path='/registro' element={<RegistroUsuario />} />
+                        <Route path='/register' element={<RegistroUsuario />} />
 
                         {/* Ruta para la vista de Inicio de Sesión */}
                         <Route path='/login' element={<InicioSesion />} />
