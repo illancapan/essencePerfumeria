@@ -75,6 +75,8 @@ CREATE TABLE carrito (
 ---
 INSERT INTO carrito (usuario_id, producto_id, cantidad)
 VALUES (2, 3, 2); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
+INSERT INTO carrito (usuario_id, producto_id, cantidad)
+VALUES (1, 2, 1); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
 ---
 
 
