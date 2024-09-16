@@ -7,7 +7,6 @@ import styles from './RegistroUsuario.module.css'
 
 const RegistroUsuario = () => {
     const [mensaje, setMensaje] = useState('')
-    const [error, setError] = useState('')
 
     const handleRegistro = (usuario) => {
         console.log('Datos del usuario:', usuario)

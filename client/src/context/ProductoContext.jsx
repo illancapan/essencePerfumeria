@@ -4,24 +4,24 @@ const URL_API = 'http://localhost:3000/api/perfumes'
 
 const ProductosProvider = ({ children }) => {
     const [productos, setProductos] = useState([])
-    const [fragancia_id, setFragancia_id] = useState('');
-    const [orderBy, setOrderBy] = useState('');
+    const [fragancia_id, setFragancia_id] = useState('')
+    const [orderBy, setOrderBy] = useState('')
     const [cargando, setCargando] = useState(true)
     const [error, setError] = useState(null)
 
     useEffect(() => {
         const cargarProductos = async () => {
             try {
-                const url = new URL(URL_API);
-                const params = new URLSearchParams({ fragancia_id, orderBy });
-                url.search = params.toString();
+                const url = new URL(URL_API)
+                const params = new URLSearchParams({ fragancia_id, orderBy })
+                url.search = params.toString()
 
-                const respuesta = await fetch(url);
-                const data = await respuesta.json();
+                const respuesta = await fetch(url)
+                const data = await respuesta.json()
                 if (Array.isArray(data)) {
-                    setProductos(data);
+                    setProductos(data)
                 } else {
-                    throw new Error('Datos inesperados del servidor');
+                    throw new Error('Datos inesperados del servidor')
                 }
             } catch (error) {
                 setError(error)
@@ -34,7 +34,9 @@ const ProductosProvider = ({ children }) => {
     }, [fragancia_id, orderBy])
 
     return (
-        <ProductoContext.Provider value={{ productos, cargando, error, setFragancia_id, setOrderBy }}>
+        <ProductoContext.Provider
+            value={{ productos, cargando, error, setFragancia_id, setOrderBy }}
+        >
             {children}
         </ProductoContext.Provider>
     )
