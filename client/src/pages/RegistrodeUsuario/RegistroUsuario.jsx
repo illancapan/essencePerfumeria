@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import RegistroForm from '../../components/RegistroUsuario/RegistroForm'
-import Mensaje from '../../components/RegistroUsuario/Mensaje'
+import Mensaje from '../../components/RegistroUsuario'
 import styles from './RegistroUsuario.module.css'
 
 const RegistroUsuario = () => {
