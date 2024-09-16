@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import styles from './InicioSesion.module.css'
@@ -18,7 +18,7 @@ const InicioSesion = () => {
     }
 
     return (
-        <div className={styles.app}>
+        <>
             {/* Inicio del Header */}
             <Header />
             {/* Fin del Header */}
@@ -52,7 +52,7 @@ const InicioSesion = () => {
             {/* Inicio del Footer */}
             <Footer />
             {/* Fin del Footer */}
-        </div>
+        </>
     )
 }
 

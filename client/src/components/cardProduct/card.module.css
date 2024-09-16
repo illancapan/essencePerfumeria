@@ -1,0 +1,27 @@
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+    );
+    gap: 2rem;
+}
+.productCard {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.productCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.productInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

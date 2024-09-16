@@ -63,6 +63,23 @@ CREATE TABLE historial_pedidos (
 );
 
 
+-- Tabla de Carrito
+
+CREATE TABLE carrito (
+  id                BIGINT          PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  usuario_id        BIGINT REFERENCES usuarios(id),
+  producto_id       BIGINT REFERENCES productos(id),
+  cantidad          INT NOT NULL DEFAULT 1,
+  fecha_agregado    TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+---
+INSERT INTO carrito (usuario_id, producto_id, cantidad)
+VALUES (2, 3, 2); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
+INSERT INTO carrito (usuario_id, producto_id, cantidad)
+VALUES (1, 2, 1); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
+---
+
+
 
 -- INSERT TABLAS PRUEBAS
 
