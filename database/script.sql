@@ -72,12 +72,6 @@ CREATE TABLE carrito (
   cantidad          INT NOT NULL DEFAULT 1,
   fecha_agregado    TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
----
-INSERT INTO carrito (usuario_id, producto_id, cantidad)
-VALUES (2, 3, 2); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
-INSERT INTO carrito (usuario_id, producto_id, cantidad)
-VALUES (1, 2, 1); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
----
 
 
 
@@ -123,3 +117,10 @@ INSERT INTO detalles_pedido (pedido_id, producto_id, cantidad, precio_unitario) 
 (3, 3, 1, 50000),
 (4, 1, 2, 25000),
 (5, 3, 1, 50000);
+
+--- script carrito
+INSERT INTO carrito (usuario_id, producto_id, cantidad)
+VALUES (2, 3, 2); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
+INSERT INTO carrito (usuario_id, producto_id, cantidad)
+VALUES (1, 2, 1); -- Usuario con id 1 agrega 1 unidad del producto con id 2 al carrito
+---
