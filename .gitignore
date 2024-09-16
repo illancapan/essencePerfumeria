@@ -5,7 +5,7 @@ node_modules/
 client/node_modules/
 
 # Ignorar otros archivos y carpetas no deseados (opcional)
-dist/
+# dist/
 .env
 *.log
 .DS_Store
