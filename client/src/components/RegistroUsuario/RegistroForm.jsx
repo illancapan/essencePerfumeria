@@ -17,11 +17,11 @@ const RegistroForm = ({ onSubmit }) => {
             contrasena,
             direccion,
             telefono,
-            rol: 'usuario', // Se puede ajustar según tu lógica
+            rol: 'usuario',
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/register', {
+            const response = await fetch(import.meta.env.VITE_USUARIO_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
