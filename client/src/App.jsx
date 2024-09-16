@@ -1,7 +1,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import PrincipalMaqueta from './pages/principalMaqueta/PrincipalMaqueta'
-import RegistroUsuario from './pages/registrodeUsuario/RegistroUsuario'
+import RegistroUsuario from './pages/RegistrodeUsuario/RegistroUsuario'
 import InicioSesion from './pages/iniciodeSesion/InicioSesion'
 import MiPerfilUsuario from './pages/miPerfilUsuario/MiPerfilUsuario'
 import MiPerfilAdmin from './pages/miPerfilAdmin/MiPerfilAdmin'
@@ -21,7 +21,7 @@ function App() {
                         <Route path='/' element={<PrincipalMaqueta />} />
 
                         {/* Ruta para la vista de Registro de Usuario */}
-                        <Route path='/registro' element={<RegistroUsuario />} />
+                        <Route path='/register' element={<RegistroUsuario />} />
 
                         {/* Ruta para la vista de Inicio de Sesión */}
                         <Route path='/login' element={<InicioSesion />} />
