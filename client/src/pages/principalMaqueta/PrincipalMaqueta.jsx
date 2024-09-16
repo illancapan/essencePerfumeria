@@ -3,9 +3,10 @@ import { ProductoContext } from '../../context/ProductoContext'
 import Header from '../../components/header/Header'
 import fondo from '../../assets/fondo.jpg'
 import Footer from '../../components/footer/Footer'
+import Card from '../../components/cardProduct/Card'
 
 function PrincipalMaqueta() {
-    const { productos, cargando, error } = useContext(ProductoContext)
+    const { cargando, error, setFragancia_id, setOrderBy } = useContext(ProductoContext)
 
     if (cargando) return <p>Cargando...</p>
     if (error) return <p>Error: {error.message}</p>
@@ -80,32 +81,10 @@ function PrincipalMaqueta() {
                     .filter-options {
                         display: flex;
                         gap: 1.5rem;
+                        cursor: pointer;
                     }
                     .filter-options li:first-child {
                         font-weight: bold;
-                    }
-                    .product-grid {
-                        display: grid;
-                        grid-template-columns: repeat(
-                            auto-fill,
-                            minmax(200px, 1fr)
-                        );
-                        gap: 2rem;
-                    }
-                    .product-card {
-                        background-color: #f0f0f0;
-                        padding: 1rem;
-                    }
-                    .product-card img {
-                        width: 100%;
-                        height: 200px;
-                        object-fit: cover;
-                        margin-bottom: 1rem;
-                    }
-                    .product-info {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
                     }
                     .pagination {
                         display: flex;
@@ -140,31 +119,21 @@ function PrincipalMaqueta() {
                 </section>
 
                 <section className='products'>
-                    <div className='product-filters'>
-                        <ul className='filter-options'>
-                            <li>Todos</li>
-                            <li>Citricos</li>
-                            <li>Frutales</li>
-                            <li>Hombre</li>
-                            <li>Mujer</li>
-                        </ul>
-                        <select>
-                            <option>Filtro dar funcion :D</option>
-                        </select>
+                <div className='product-filters'>
+            <ul className='filter-options'>
+                <li onClick={() => { setFragancia_id('') }}>Todos</li>
+                <li onClick={() => setFragancia_id('1')}>Citricos</li>
+                <li onClick={() => setFragancia_id('2')}>Florales</li>
+                <li onClick={() => setFragancia_id('3')}>Maderas</li>
+            </ul>
+            <select onChange={(e) => setOrderBy(e.target.value)}>
+                <option value="">Ordenar por precio</option>
+                <option value="asc">Precio: Bajo a Alto</option>
+                <option value="desc">Precio: Alto a Bajo</option>
+            </select>
                     </div>
 
-                    <div className='product-grid'>
-                        {productos.map((product) => (
-                            <div key={product.id} className='product-card'>
-                                <img src={product.image} alt={product.name} />
-                                <h3>{product.name}</h3>
-                                <div className='product-info'>
-                                    <span>{product.price}</span>
-                                    <span>★★★★☆</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <Card/>
 
                     <div className='pagination'>
                         {[1, 2, 3, 4, 5].map((page) => (

@@ -3,23 +3,28 @@ footer {
     padding: 2rem;
     margin-top: 4rem;
 }
+
 .footerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 .subscribe {
     display: flex;
     gap: 1rem;
 }
+
 .subscribe input {
     padding: 0.5rem;
     border: 1px solid #ccc;
 }
+
 .subscribe button {
     padding: 0.5rem 1rem;
     background-color: black;
@@ -27,13 +32,16 @@ footer {
     border: none;
     cursor: pointer;
 }
+
 .socialIcons {
     display: flex;
     gap: 1rem;
 }
-.socialIcons a{
+
+.socialIcons a {
     color: black;
 }
+
 .footerBottom {
     text-align: center;
     margin-top: 2rem;
