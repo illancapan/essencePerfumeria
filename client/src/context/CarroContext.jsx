@@ -11,9 +11,7 @@ export const CarroProvider = ({ children }) => {
         try {
             // const carroUrl = import.meta.env.VITE_CARRO_URL
             // const response = await fetch(`${carroUrl}/carrito/2`)
-            const response = await fetch(
-                `${import.meta.env.VITE_CARRO_URL}/api/carrito/2`
-            )
+            const response = await fetch(`${import.meta.env.VITE_CARRO_URL}/api/carrito/2`)
             if (!response.ok) {
                 throw new Error('Network response was not ok')
             }

@@ -1,0 +1,97 @@
+.app {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.hero {
+    position: relative;
+    height: calc(70vh - 1px);
+    background-color: #f0f0f0;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroNav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.heroNavLeft {
+    left: 1rem;
+}
+
+.heroNavRight {
+    right: 1rem;
+}
+
+.intro {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.products {
+    padding: 0 2rem;
+}
+
+.productFilters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.filterOptions {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.filterOptions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.filterOptions li:first-child button {
+    font-weight: bold;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
