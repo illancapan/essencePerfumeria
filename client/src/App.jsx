@@ -2,7 +2,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import PrincipalMaqueta from './pages/principalMaqueta/PrincipalMaqueta'
 import RegistroUsuario from './pages/registrodeUsuario/RegistroUsuario'
-import InicioSesion from './pages/iniciodeSesion/InicioSesion'
+import InicioSesion from './pages/IniciodeSesion/InicioSesion'
 import MiPerfilUsuario from './pages/miPerfilUsuario/MiPerfilUsuario'
 import MiPerfilAdmin from './pages/miPerfilAdmin/MiPerfilAdmin'
 import DetalleProducto from './pages/detalleProducto/DetalleProducto'
@@ -10,6 +10,7 @@ import { ProductosProvider } from './context/ProductoContext'
 import { CarroProvider } from './context/CarroContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CarroCompras from './pages/carroDeCompras/CarroCompras'
+import PrivateRoute from './components/privateRoute/PrivateRoute';
 
 function App() {
     return (
@@ -27,7 +28,9 @@ function App() {
                         <Route path='/login' element={<InicioSesion />} />
 
                         {/* Ruta para la vista Mi perfil Usuario */}
-                        <Route path='/profile' element={<MiPerfilUsuario />} />
+                        <Route path='/profile' element={<PrivateRoute>
+                        <MiPerfilUsuario />
+                    </PrivateRoute>} />
 
                         {/* Ruta para la vista Mi perfil Admin */}
                         <Route path='/admin' element={<MiPerfilAdmin />} />
