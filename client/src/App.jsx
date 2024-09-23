@@ -1,11 +1,11 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import PrincipalMaqueta from './pages/principalMaqueta/PrincipalMaqueta'
-import RegistroUsuario from './pages/registrodeUsuario/RegistroUsuario'
+import RegistroUsuario from './pages/RegistrodeUsuario/RegistroUsuario'
 import InicioSesion from './pages/IniciodeSesion/InicioSesion'
-import MiPerfilUsuario from './pages/miPerfilUsuario/MiPerfilUsuario'
-import MiPerfilAdmin from './pages/miPerfilAdmin/MiPerfilAdmin'
-import DetalleProducto from './pages/detalleProducto/DetalleProducto'
+import MiPerfilUsuario from './pages/MiPerfilUsuario/MiPerfilUsuario'
+import MiPerfilAdmin from './pages/MiPerfilAdmin/MiPerfilAdmin'
+import DetalleProducto from './pages/DetalleProducto/DetalleProducto'
 import { ProductosProvider } from './context/ProductoContext'
 import { CarroProvider } from './context/CarroContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -22,7 +22,7 @@ function App() {
                         <Route path='/' element={<PrincipalMaqueta />} />
 
                         {/* Ruta para la vista de Registro de Usuario */}
-                        <Route path='/registro' element={<RegistroUsuario />} />
+                        <Route path='/register' element={<RegistroUsuario />} />
 
                         {/* Ruta para la vista de Inicio de Sesión */}
                         <Route path='/login' element={<InicioSesion />} />
