@@ -9,9 +9,6 @@ import styles from './PrincipalMaqueta.module.css';
 function PrincipalMaqueta() {
     const { cargando, error, setFragancia_id, setOrderBy } = useContext(ProductoContext);
 
-    if (cargando) return <p>Cargando...</p>;
-    if (error) return <p>Error: {error.message}</p>;
-
     return (
         <div className={styles.app}>
             <Header />
@@ -24,11 +21,9 @@ function PrincipalMaqueta() {
                 </section>
 
                 <section className={styles.intro}>
-                    <h1>simple</h1>
+                    <h1>La Magia de Essence</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        Despierta tus sentidos con nuestras fraganciass exóticas y deliciosas.
                     </p>
                 </section>
 
