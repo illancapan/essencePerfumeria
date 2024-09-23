@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from 'react'
 
 const ProductoContext = createContext()
 // Reemplazamos la URL fija con la variable de entorno
-const URL_API = import.meta.env.VITE_PRODUCTOS_URL
+const URL_API = import.meta.env.VITE_API_URL;
 
 const ProductosProvider = ({ children }) => {
     const [productos, setProductos] = useState([])

@@ -6,7 +6,7 @@
 
 .hero {
     position: relative;
-    height: calc(100vh - 80px);
+    height: calc(70vh - 1px);
     background-color: #f0f0f0;
 }
 
