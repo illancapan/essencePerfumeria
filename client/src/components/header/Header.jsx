@@ -12,7 +12,7 @@ function Header() {
                 <nav>
                     <ul>
                         <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/'>Inicio</NavLink>
-                        <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/registro'>Registrarse</NavLink>
+                        <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/register'>Registrarse</NavLink>
                         <NavLink className={setActiveClass} style={{textDecoration: 'none'}} to='/login'>Iniciar sesion</NavLink>
                     </ul>
                 </nav>
