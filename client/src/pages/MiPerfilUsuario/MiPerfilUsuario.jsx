@@ -1,9 +1,16 @@
-import React from 'react'
-import './MiPerfilUsuario.module.css'
-import Header from '../../components/header/Header'
-import Footer from '../../components/footer/Footer'
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Importar useNavigate
+import styles from './MiPerfilUsuario.module.css'; // Actualiza la importación del CSS
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
 const MiPerfilUsuario = () => {
+    const navigate = useNavigate(); // Crear la instancia de useNavigate
+
+    const handleLogout = () => {
+        localStorage.removeItem('token'); // Eliminar el token
+        navigate('/login'); // Redirigir a la página de inicio de sesión
+    };
     return (
         <>
             {/* Inicio del Header */}
@@ -93,6 +100,7 @@ const MiPerfilUsuario = () => {
                             >
                                 Modificar o agregar
                             </button>
+                            <button onClick={handleLogout} className={styles.logoutButton}>Cerrar Sesión</button>
                         </form>
                     </div>
 
