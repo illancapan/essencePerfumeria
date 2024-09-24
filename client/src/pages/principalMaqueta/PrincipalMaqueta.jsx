@@ -7,7 +7,7 @@ import fondoImage from '../../assets/fondo.jpg';
 import styles from './PrincipalMaqueta.module.css';
 
 function PrincipalMaqueta() {
-    const { cargando, error, setFragancia_id, setOrderBy } = useContext(ProductoContext);
+    const { setFragancia_id, setOrderBy } = useContext(ProductoContext);
 
     return (
         <div className={styles.app}>
@@ -44,11 +44,6 @@ function PrincipalMaqueta() {
 
                     <Card />
 
-                    <div className={styles.pagination}>
-                        {[1, 2, 3, 4, 5].map((page) => (
-                            <button key={page}>{page}</button>
-                        ))}
-                    </div>
                 </section>
             </main>
 

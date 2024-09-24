@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 function Footer() {
     return (
         <>
-            <footer>
+            <footer className={styles.footer}>
                 <div className={styles.footerContent}>
                     <div className={styles.logo}>
                         <NavLink
@@ -15,10 +15,14 @@ function Footer() {
                             essence
                         </NavLink>
                     </div>
-                    <div className={styles.subscribe}>
-                        <input type='email' placeholder='Ingresa tu email' />
-                        <button>Suscribete</button>
-                    </div>
+                    <div className={styles.storeAddress}>
+                    <p>Dirección: Calle Argentina 123, Santiago de Chile.</p>
+                    <p>Horario: Lunes a Viernes, 9:00 - 18:00</p>
+                </div>
+                <div className={styles.contactInfo}>
+                    <p>Contacto: (123) 456-7890 | info@essence.com</p>
+                    <p>¡Visita nuestra tienda para promociones exclusivas!</p>
+                </div>
                     <div className={styles.socialIcons}>
                         <a href={'https://web.facebook.com/?_rdc=1&_rdr'}>
                             <i
