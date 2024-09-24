@@ -5,6 +5,7 @@
         minmax(250px, 1fr)
     );
     gap: 2rem;
+    padding: 1rem;
 }
 .productCard {
     background-color: #f0f0f0;
@@ -13,15 +14,26 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.productCard:hover {
+    transform: scale(1.05);
 }
 .productCard img {
     width: 100%;
-    height: 200px;
+    height:auto;
     object-fit: cover;
+    border-radius: 4px;
     margin-bottom: 1rem;
 }
 .productInfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
+}
+.productInfo span{
+    color: #333;
 }

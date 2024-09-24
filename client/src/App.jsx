@@ -10,6 +10,8 @@ import { ProductosProvider } from './context/ProductoContext'
 import { CarroProvider } from './context/CarroContext'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CarroCompras from './pages/carroDeCompras/CarroCompras'
+import PrivateRouteUser from './components/privateRouteUser/PrivateRouteUser'
+import PrivateRouteAdmin from './components/privateRouteAdmin/PrivateRouteAdmin';
 
 function App() {
     return (
@@ -27,10 +29,24 @@ function App() {
                         <Route path='/login' element={<InicioSesion />} />
 
                         {/* Ruta para la vista Mi perfil Usuario */}
-                        <Route path='/profile' element={<MiPerfilUsuario />} />
+                        <Route 
+                            path='/profile' 
+                            element={
+                                <PrivateRouteUser>
+                                    <MiPerfilUsuario />
+                                </PrivateRouteUser>
+                            } 
+                        />
 
-                        {/* Ruta para la vista Mi perfil Admin */}
-                        <Route path='/admin' element={<MiPerfilAdmin />} />
+                         {/* Ruta para la vista Mi perfil Admin */}
+                         <Route 
+                            path='/admin' 
+                            element={
+                                <PrivateRouteAdmin>
+                                    <MiPerfilAdmin />
+                                </PrivateRouteAdmin>
+                            } 
+                        />
 
                         {/* Ruta para ver el carro de compras */}
                         <Route path='/carrito' element={<CarroCompras />} />

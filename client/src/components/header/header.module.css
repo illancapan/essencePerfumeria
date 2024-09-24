@@ -1,10 +1,3 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-}
 .active{
     color: black;
     font-weight: bold;
@@ -15,14 +8,5 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-}
-nav ul {
-    display: flex;
-    list-style-type: none;
-    gap: 1.5rem;
-}
-.icons {
-    display: flex;
-    gap: 1rem;
 }
 

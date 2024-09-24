@@ -87,11 +87,14 @@ INSERT INTO fragancias (nombre, descripcion) VALUES
 
 -- PRODUCTOS
 INSERT INTO productos (nombre, descripcion, precio, descuento, stock, fragancia_id, imagen) VALUES
-('Citrus Breeze', 'Una fragancia fresca con notas cítricas.', 25000, 0.00, 100, 1, 'imagen1.jpg'),
-('Floral Fantasy', 'Una delicada mezcla de flores suaves.', 42000, 5.00, 200, 2, 'imagen2.jpg'),
-('Woody Whisper', 'Una fragancia cálida con notas amaderadas.', 50000, 10.00, 150, 3, 'imagen3.jpg'),
-('Citrus Splash', 'Un aroma energizante con toques cítricos.', 22000, 0.00, 120, 1, 'imagen4.jpg'),
-('Midnight Woods', 'Una fragancia intensa con toques amaderados.', 54000, 15.00, 180, 3, 'imagen5.jpg');
+('Citrus Breeze', 'Una fragancia fresca con notas cítricas.', 25000, 0.00, 100, 1, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/es_CL/dw00885a6e/LNT%20LE%20PARFUM/LAN-LATAM3614274068801/3614274068801_1.jpg?sw=465&sh=465&sm=cut&sfrm=jpg&q=70'),
+('Floral Fantasy', 'Una delicada mezcla de flores suaves.', 42000, 5.00, 200, 2, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/es/dw648a7f0a/LVEB%20EXTRAORDINAIRE/LE688200_1.jpg?sw=465&sh=465&sm=cut&sfrm=jpg&q=70'),
+('Woody Whisper', 'Una fragancia cálida con notas amaderadas.', 50000, 10.00, 150, 3, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/default/dw9840ada2/mx/images/PACKSHOTS/FRAGRANCE/TRESOR/072025_Tresor/3147758034912_Tresor.jpg?sw=465&sh=465&sm=cut&sfrm=png&q=70'),
+('Citrus Splash', 'Un aroma energizante con toques cítricos.', 22000, 0.00, 120, 1, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/default/dw1305fb33/mx/images/PACKSHOTS/FRAGRANCE/HYPNOSE/186025_Hypnose/3147758235548_Hypnose_eau_de_parfum.jpg?sw=465&sh=465&sm=cut&sfrm=png&q=70'),
+('Midnight Woods', 'Una fragancia intensa con toques amaderados.', 54000, 15.00, 180, 3, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/es/dwd83d56c4/MILLE%20ET%20UNE%20ROSES/LD726800_1.jpg?sw=465&sh=465&sm=cut&sfrm=jpg&q=70'),
+('Sunrise Citrus', 'Una mezcla brillante y vibrante de limón, pomelo y bergamota, que captura la esencia de una mañana iluminada por el sol. Perfecto para energizar tu espíritu.', 45000, 5.00, 150, 1, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/default/dw5eb52f09/chile/products/8155349_3147758155341_O_De_Lancome.jpg?sw=465&sh=465&sm=cut&sfrm=png&q=70'),
+('Tropical Breeze', 'Una refrescante combinación de lima, mandarina y piña, evocando la sensación de una cálida brisa del océano. Ideal para un día vibrante y despreocupado.', 35000, 10.00, 180, 1, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/default/dw48997f72/mx/images/PACKSHOTS/FRAGRANCE/POEME/092025_Poeme/3147758155112_Poeme.jpg?sw=465&sh=465&sm=cut&sfrm=png&q=70'),
+('Eternal Bloom', 'Una mezcla romántica de peonía, jazmín y rosa, que captura la esencia de un jardín en plena floración en primavera. Elegante y atemporal.', 32000, 0.00, 100, 2, 'https://www.lancome.cl/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-latam-master-catalog/default/dw715b012e/images/PACKSHOTS/FRAGRANCE/LAN-LATAM50403-MTR/Lancome-Fragrance-La-Nuit-Tresor-Intense-bottle-30ml-000-3614273650380-Front-v2.jpg?sw=465&sh=465&sm=cut&sfrm=png&q=70');
 
 
 -- USUARIOS
