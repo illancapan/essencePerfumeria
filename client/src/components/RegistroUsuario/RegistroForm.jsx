@@ -8,6 +8,7 @@ const RegistroForm = ({ onSubmit }) => {
     const [direccion, setDireccion] = useState('')
     const [telefono, setTelefono] = useState('')
 
+    
     const handleSubmit = async (e) => {
         e.preventDefault()
         const usuario = {
@@ -21,13 +22,13 @@ const RegistroForm = ({ onSubmit }) => {
         }
 
         try {
-            const response = await fetch(import.meta.env.VITE_USUARIO_URL, {
+            const response = await fetch(`${import.meta.env.VITE_USUARIO_URL}/register`, { // Usa la variable de entorno
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(usuario),
-            })
+            });
 
             if (!response.ok) {
                 throw new Error('Error en el registro')
