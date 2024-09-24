@@ -5,9 +5,12 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { useParams, Link } from 'react-router-dom'
 import { ProductoContext } from '../../context/ProductoContext'
+import { CarroContext } from '../../context/CarroContext'
+import AgregarAlCarro from '../../components/agregarAlCarro/AgregarAlCarro'
 
 const DetalleProducto = () => {
     const { productos } = useContext(ProductoContext)
+    const { añadirAlCarrito } = useContext(CarroContext)
     const { id } = useParams()
 
     const productosId = productos.filter((ele) => ele.id === id)
@@ -37,11 +40,17 @@ const DetalleProducto = () => {
                                     <h4 className='p-3'>
                                         Precio: ${producto.precio}
                                     </h4>
-                                    <Link to={'/carrito/'}>
-                                        <Button variant='danger'>
-                                            Añadir 🛒
-                                        </Button>
-                                    </Link>
+                                    {/* <Link to={'/carrito/'}> */}
+                                    {/* <Button
+                                        variant='danger'
+                                        onClick={() =>
+                                            añadirAlCarrito(producto)
+                                        }
+                                    >
+                                        Añadir 🛒
+                                    </Button> */}
+                                    <AgregarAlCarro producto={producto} />
+                                    {/* </Link> */}
                                 </div>
                             </Card.Body>
                         </div>
