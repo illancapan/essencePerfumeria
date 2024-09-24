@@ -19,11 +19,6 @@ const InicioSesion = () => {
                 },
                 body: JSON.stringify({ email, contrasena }),
             });
-            // Resto del manejo de la respuesta
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
 
             const data = await response.json(); // Capturar el cuerpo de la respuesta
 
