@@ -5,16 +5,14 @@ import Footer from '../../components/footer/Footer'
 import Styles from './CarroCompras.module.css'
 
 function CarroCompras() {
-    const { carro, loading } = useContext(CarroContext)
+    const { carro } = useContext(CarroContext)
     const [products, setProducts] = useState([])
     const [total, setTotal] = useState(0)
     const [discount, setDiscount] = useState(0)
 
     useEffect(() => {
-        if (!loading) {
-            setProducts(carro)
-        }
-    }, [carro, loading])
+        setProducts(carro) // Carga los productos del carrito
+    }, [carro])
 
     const calculateTotal = useMemo(() => {
         const subtotal = products.reduce(
@@ -31,8 +29,8 @@ function CarroCompras() {
     }, [calculateTotal])
 
     const modifyQuantity = (id, change) => {
-        setProducts(
-            products.map((product) =>
+        setProducts((prevProducts) =>
+            prevProducts.map((product) =>
                 product.id === id
                     ? {
                           ...product,
@@ -47,7 +45,13 @@ function CarroCompras() {
     }
 
     const removeProduct = (id) => {
-        setProducts(products.filter((product) => product.id !== id))
+        setProducts((prevProducts) => {
+            const updatedProducts = prevProducts.filter(
+                (product) => product.id !== id
+            )
+            localStorage.setItem('carro', JSON.stringify(updatedProducts)) // Actualiza el localStorage
+            return updatedProducts
+        })
     }
 
     const applyDiscount = (code) => {
@@ -58,7 +62,26 @@ function CarroCompras() {
         }
     }
 
-    if (loading) return <p>Loading...</p>
+    // Renderiza pantalla vacía si no hay productos
+    if (products.length === 0) {
+        return (
+            <>
+                <Header />
+                <div className={Styles.carroComprasContainer}>
+                    <div className={Styles.mainContent}>
+                        <main className='container text-center'>
+                            <h1 className='mb-4'>Tu carrito está vacío</h1>
+                            <p>
+                                ¡Explora nuestra tienda para encontrar
+                                productos!
+                            </p>
+                        </main>
+                    </div>
+                    <Footer className={Styles.footer} />
+                </div>
+            </>
+        )
+    }
 
     return (
         <>
@@ -79,68 +102,79 @@ function CarroCompras() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {products.map((product) => (
-                                    <tr key={product.id}>
-                                        <td>{product.nombre}</td>
-                                        <td>
-                                            <img
-                                                src={product.imagen}
-                                                alt={product.nombre}
-                                                className='img-thumbnail'
-                                                width={50}
-                                                height={50}
-                                            />
-                                        </td>
-                                        <td>
-                                            $
-                                            {(
-                                                parseFloat(product.precio) || 0
-                                            ).toFixed(2)}
-                                        </td>
-                                        <td>
-                                            <button
-                                                className='btn btn-secondary btn-sm me-2'
-                                                onClick={() =>
-                                                    modifyQuantity(
-                                                        product.id,
-                                                        -1
-                                                    )
-                                                }
-                                            >
-                                                -
-                                            </button>
-                                            {product.cantidad || 1}
-                                            <button
-                                                className='btn btn-secondary btn-sm ms-2'
-                                                onClick={() =>
-                                                    modifyQuantity(
-                                                        product.id,
-                                                        1
-                                                    )
-                                                }
-                                            >
-                                                +
-                                            </button>
-                                        </td>
-                                        <td>
-                                            ${' '}
-                                            {(
-                                                (parseFloat(product.precio) ||
-                                                    0) * (product.cantidad || 1)
-                                            ).toFixed(2)}
-                                        </td>
-                                        <td>
-                                            <button
-                                                className='btn btn-danger btn-sm'
-                                                onClick={() =>
-                                                    removeProduct(product.id)
-                                                }
-                                            >
-                                                Eliminar
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))}
+                                {products.map(
+                                    (product) =>
+                                        product ? ( // Verifica que el producto no sea nulo
+                                            <tr key={product.id}>
+                                                <td>{product.nombre}</td>
+                                                <td>
+                                                    <img
+                                                        src={product.imagen}
+                                                        alt={product.nombre}
+                                                        className='img-thumbnail'
+                                                        width={50}
+                                                        height={50}
+                                                    />
+                                                </td>
+                                                <td>
+                                                    ${' '}
+                                                    {(
+                                                        parseFloat(
+                                                            product.precio
+                                                        ) || 0
+                                                    ).toFixed(2)}
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        className='btn btn-secondary btn-sm me-2'
+                                                        onClick={() =>
+                                                            modifyQuantity(
+                                                                product.id,
+                                                                -1
+                                                            )
+                                                        }
+                                                    >
+                                                        -
+                                                    </button>
+                                                    {product.cantidad || 1}
+                                                    <button
+                                                        className='btn btn-secondary btn-sm ms-2'
+                                                        onClick={() =>
+                                                            modifyQuantity(
+                                                                product.id,
+                                                                1
+                                                            )
+                                                        }
+                                                    >
+                                                        +
+                                                    </button>
+                                                </td>
+                                                <td>
+                                                    ${' '}
+                                                    {(
+                                                        parseFloat(
+                                                            product.precio
+                                                        ) ||
+                                                        0 *
+                                                            (product.cantidad ||
+                                                                1)
+                                                    ).toFixed(2)}
+                                                </td>
+                                                <td>
+                                                    <button
+                                                        className='btn btn-danger btn-sm'
+                                                        onClick={() =>
+                                                            removeProduct(
+                                                                product.id
+                                                            )
+                                                        }
+                                                    >
+                                                        Eliminar
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        ) : null // No renderiza si el producto es nulo
+                                )}
                             </tbody>
                         </table>
                         <div className='d-flex justify-content-between mt-4'>

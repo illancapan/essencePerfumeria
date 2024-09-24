@@ -1,42 +1,38 @@
-// src/context/CarroContext.jsx
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect, useCallback } from 'react'
 
 export const CarroContext = createContext()
 
 export const CarroProvider = ({ children }) => {
-    const [carro, setCarro] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [carro, setCarro] = useState(() => {
+        // Cargar carrito desde localStorage al iniciar
+        const carritoGuardado = localStorage.getItem('carro')
+        const carroInicial = carritoGuardado ? JSON.parse(carritoGuardado) : []
 
-    const fetchCarrito = async () => {
-        try {
-            // const carroUrl = import.meta.env.VITE_CARRO_URL
-            // const response = await fetch(`${carroUrl}/carrito/2`)
-            const response = await fetch(`${import.meta.env.VITE_CARRO_URL}/api/carrito/2`)
-            if (!response.ok) {
-                throw new Error('Network response was not ok')
+        // Filtrar productos inválidos
+        return carroInicial.filter(
+            (producto) => producto && producto.precio != null
+        )
+    })
+
+    // Función para añadir un producto al carrito
+    const añadirAlCarrito = useCallback((producto) => {
+        setCarro((prevCarro) => {
+            // Verifica si el producto ya está en el carrito
+            const productoExistente = prevCarro.find(
+                (item) => item.id === producto.id
+            )
+            if (productoExistente) {
+                console.log('El producto ya está en el carrito.')
+                return prevCarro // No agregar el producto si ya existe
             }
-
-            // Verifica el tipo de contenido antes de convertirlo a JSON
-            const contentType = response.headers.get('Content-Type')
-            if (contentType && contentType.includes('application/json')) {
-                const data = await response.json()
-                setCarro(data)
-            } else {
-                console.error('Respuesta no es JSON:', await response.text())
-            }
-        } catch (error) {
-            console.error('Error fetching carrito:', error)
-        } finally {
-            setLoading(false)
-        }
-    }
-
-    useEffect(() => {
-        fetchCarrito()
+            const nuevoCarro = [...prevCarro, producto]
+            localStorage.setItem('carro', JSON.stringify(nuevoCarro)) // Guardar en localStorage
+            return nuevoCarro
+        })
     }, [])
 
     return (
-        <CarroContext.Provider value={{ carro, loading }}>
+        <CarroContext.Provider value={{ carro, añadirAlCarrito }}>
             {children}
         </CarroContext.Provider>
     )
